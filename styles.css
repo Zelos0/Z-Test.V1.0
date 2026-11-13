@@ -7,6 +7,7 @@ body {
     padding: 0;
     text-align: center;
     line-height: 1.6;
+    padding-bottom: 80px; /* Platz für den fixierten Footer */
 }
 
 /* Header */
@@ -62,6 +63,7 @@ nav a:hover {
 }
 
 .section h2 {
+    position: relative; /* Bezugspunkt für den Glitch-Layer */
     font-size: 2.5em;
     text-shadow: 0 0 10px #00ff00;
 }
@@ -109,4 +111,22 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+}
+
+/* Hover-Glitch der Navigation (Klasse wird von script.js gesetzt) */
+nav a.glitch-effect {
+    animation: nav-glitch 0.3s steps(2) infinite;
+}
+
+@keyframes nav-glitch {
+    0%   { text-shadow: 2px 0 #0ff, -2px 0 #f0f; }
+    50%  { text-shadow: -2px 0 #0ff, 2px 0 #f0f; }
+    100% { text-shadow: 1px 1px #0ff, -1px -1px #f0f; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .section h2:before,
+    nav a.glitch-effect {
+        animation: none;
+    }
 }

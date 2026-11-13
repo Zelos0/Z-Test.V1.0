@@ -1,0 +1,11 @@
+{
+  "port": 4310,
+  "roots": ["H:\\Projekte"],
+  "cacheDir": "H:\\DevCache\\projekt-hub",
+  "maxMePath": "H:\\MY-SKILLS\\MAX-ME",
+  "editor": "code",
+  "scanDepth": 1,
+  "git": { "trustRoots": true },
+  "sync": { "onStart": true, "intervalMinutes": 30, "autoPull": true, "autoCloneMissing": true },
+  "github": { "owners": [], "includeForks": false, "includeArchived": false }
+}

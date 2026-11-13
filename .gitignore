@@ -1,0 +1,5 @@
+# lokale Demo-/Testdaten und lokale Hub-Konfiguration
+/demo/
+projekt-hub/demo/
+projekt-hub/app/config.json
+node_modules/
